@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
- * main - Using charput and char to recreate alphabet in lowercase
- * Return: 0 to sucess
+ * print_alphabet - Using charput and char to recreate alphabet in lowercase
+ * Return: alphabet to sucess
  */
-int main(void)
+void print_alphabet(void)
 {
 	char alphabet = 'a';
 		while (alphabet <= 'z')
@@ -14,5 +14,4 @@ int main(void)
 		alphabet++;
 	}
 	putchar('\n');
-	return (0);
 }
