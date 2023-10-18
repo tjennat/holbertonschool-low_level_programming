@@ -15,6 +15,7 @@ int main(void)
 	}
 	{
 		char hexa = 'a';
+
 		while (hexa <= 'f')
 		{
 			putchar(hexa);
