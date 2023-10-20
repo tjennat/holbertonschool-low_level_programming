@@ -3,12 +3,10 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm -f
-CFLAGS = -Wall -Werror -Wextra -pedantic
+CFLAGS += -Werror -Wextra -I./include
 
-all: $(NAME)
-
-$(NAME): $(OBJ)
-    $(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+all : $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) *~ *.swp $(NAME)
@@ -18,4 +16,4 @@ oclean:
 
 fclean: clean oclean
 
-re: fclean all
+re: oclean all
