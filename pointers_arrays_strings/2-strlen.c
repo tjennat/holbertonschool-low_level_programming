@@ -1,18 +1,16 @@
-#include "main.h"
-
+#include"main.h"
 /**
  * _strlen - count lenght of string
- * @len: lenght of my string
- * @ptr: is my var that translate *s
+ * @s: lenght of my string
+ * Return:returns the length of a string.
  */
 int _strlen(char *s)
 {
-	int len;
+	int l = 0;
 
-	len = 0;
-	while (s[len] != '\0')
-		{
-			len++;
-		}
-	return (len);	
+	while (s[l] != '\0')
+	{
+		l++;
+	}
+	return (l);
 }
