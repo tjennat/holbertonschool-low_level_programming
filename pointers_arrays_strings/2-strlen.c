@@ -3,15 +3,16 @@
 /**
  * _strlen - count lenght of string
  * @len: lenght of my string
+ * @ptr: is my var that translate *s
  */
 int _strlen(char *s)
 {
-	int len = 0,ps = *s;
+	int len;
 
-	while (ps != '\0')
+	len = 0;
+	while (s[len] != '\0')
 		{
 			len++;
-			s++;
 		}
 	return (len);	
 }
