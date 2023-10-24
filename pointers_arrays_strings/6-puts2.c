@@ -1,0 +1,17 @@
+#include "main.h"
+
+/**
+ * puts2 - is a function that will read content of a string
+ * @str: is my string var
+ */
+void puts2(char *str)
+{
+	int s = 0;
+
+	while (str[s] == '\0')
+	{
+		_putchar(str[s]);
+		s++
+	}
+	_putchar('\n');
+}
