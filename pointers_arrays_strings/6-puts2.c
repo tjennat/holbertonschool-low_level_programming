@@ -2,7 +2,7 @@
 
 /**
  * puts2 - is a function that will read content of a string
- * @str: is my string var
+ * @str: is my var for string
  */
 void puts2(char *str)
 {
