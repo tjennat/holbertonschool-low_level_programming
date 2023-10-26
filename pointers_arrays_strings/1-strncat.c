@@ -5,6 +5,7 @@
  * @dest: is pointer to dest
  * @src: is pointer to src
  * @n: is numb of bytes
+ * Return: dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
