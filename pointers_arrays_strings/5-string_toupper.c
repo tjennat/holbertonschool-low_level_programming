@@ -2,7 +2,7 @@
 
 /**
  * string_toupper - string
- * @i: elements
+ * @s: pointer to the string
  * Return: s
  */
 char *string_toupper(char *s)
