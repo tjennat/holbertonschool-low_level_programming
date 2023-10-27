@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * reverse_array - reversing number element 
+ * reverse_array - reversing number element
  * @a: pointer to the string
  * @n: numb of elements
  */
