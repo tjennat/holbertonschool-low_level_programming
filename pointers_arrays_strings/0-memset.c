@@ -3,14 +3,15 @@
 /**
  * _memset - returning pointer to modified area
  * @s: pointer
- * @b: is a char 
+ * @b: is a char
  * @n: uns int
+ * Return: start
  */
-char *_memset(char *s, char b, unsigned int n) 
+char *_memset(char *s, char b, unsigned int n)
 {
 	char *start = s;
 
-	while (n > 0) 
+	while (n > 0)
 	{
 		*s = b;
 		s++;
