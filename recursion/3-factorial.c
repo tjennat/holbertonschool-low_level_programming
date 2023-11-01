@@ -3,6 +3,7 @@
 /**
  * factorial - using factorial in recursive
  * @n: is my var
+ * Return: factorial number
  */
 int factorial(int n)
 {
