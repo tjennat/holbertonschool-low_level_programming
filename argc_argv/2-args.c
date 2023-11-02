@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - 
+ * main - printing all arg received
  * @argc: argu var
  * @argv: argu var
  * Return: zero
