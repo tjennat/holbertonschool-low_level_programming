@@ -12,9 +12,9 @@ int main(int argc, char **argv)
 	int j = 1;
 
 
-	if (argc > 1)
+	if (argc >= 3)
 	{
-	
+
 	for (i = 1; i < argc; i++)
 	{
 		j = j * atoi(argv[i]);
@@ -22,8 +22,8 @@ int main(int argc, char **argv)
 	printf("%d\n", j);
 	}
 
-	if (argc == 1)
+	if (argc < 3)
 		printf("Error\n");
-	
+
 	return (0);
 }
