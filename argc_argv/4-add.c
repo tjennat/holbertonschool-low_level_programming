@@ -4,44 +4,42 @@
 #include <ctype.h>
 
 /**
- * main - Add positive numbers.
- * @argc: The number of arguments.
- * @argv: An array of arguments as strings.
- * Return: 0 if successful, 1 if there is an error.
+ * main - add n number
+ * @argc: arg numb elem
+ * @argv: arg string
+ * Return: to sucess
  */
-int main(int argc, char **argv)
+
+int main(int argc, char *argv[])
 {
-    int i, j = 0;
+	int i;
+	int j;
+	int sum = 0;
 
-    if (argc == 1)
-    {
-        printf("0\n");
-        return 0;
-    }
 
-    for (i = 1; i < argc; i++)
-    {
-        for (int k = 0; argv[i][k] != '\0'; k++)
-        {
-            if (!isdigit(argv[i][k]))
-            {
-                printf("Error\n");
-                return 1;
-            }
-        }
+	for (j = 1 ; j < argc ; j++)
+	{
+		char *arg = argv[j];
+		int isDigit = 1;
 
-        int num = atoi(argv[i]);
-
-        if (num <= 0)
-        {
-            printf("Error\n");
-            return 1;
-        }
-
-        j += num;
-    }
-
-    printf("%d\n", j);
-    return 0;
+		for (i = 0 ; arg[i] != '\0' ; i++)
+		{
+			if (!isdigit(arg[i]))
+			{
+				isDigit = 0;
+				break;
+			}
+		}
+		if (isDigit)
+		{
+			sum += atoi(arg);
+		}
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
+	}
+	printf("%d\n", sum);
+	return (0);
 }
-
