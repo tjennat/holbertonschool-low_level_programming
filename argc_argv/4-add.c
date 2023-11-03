@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 /**
- * main - add positive numbers.
+ * main - Add positive numbers.
  * @argc: The number of arguments.
  * @argv: An array of arguments as strings.
- * Return: 0 if successful, 1 if there is an error.
+ * Return: zero or one if it's sucessful or not
  */
 int main(int argc, char **argv)
 {
