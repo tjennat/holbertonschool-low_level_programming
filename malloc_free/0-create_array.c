@@ -4,6 +4,7 @@
  * create _array - creating an array calculating
  * @size: size of the array
  * @c: is my char that's going to point
+ * Return: Arr or null
  */
 char *create_array(unsigned int size, char c)
 {
