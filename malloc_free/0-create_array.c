@@ -2,7 +2,7 @@
 
 
 /**
- * create _array - creating an array calculating
+ * create_array - creating an array calculating
  * @size: size of the array
  * @c: is my char that's going to point
  * Return: Arr or null
