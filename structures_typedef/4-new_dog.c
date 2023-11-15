@@ -3,6 +3,32 @@
 #include "dog.h"
 
 /**
+ * _strdup - duplicate a string of char
+ * @str: pointer to a string
+ * Return: pointer to a string
+ */
+
+char *_strdup(char *str);
+
+char *_strdup(char *str)
+{
+	char *s;
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	s = malloc(strlen(str) + 1);
+	if (s == NULL)
+	{
+		return (NULL);
+	}
+	{
+		strcpy(s, str);
+	}
+	return (s);
+}
+/**
  * new_dog - creating a new dog
  * @name: name is ouaoua
  * @age: is old bro
@@ -12,12 +38,6 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *ouaoua;
-	int a, b;
-
-	for (a = 0; name[a]; a++)
-		;
-	for (b = 0; owner[b]; b++)
-		;
 
 	ouaoua = malloc(sizeof(dog_t));
 	if (ouaoua == NULL)
@@ -39,5 +59,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	ouaoua->age = age;
 
-return (ouaoua);
+	return (ouaoua);
 }
