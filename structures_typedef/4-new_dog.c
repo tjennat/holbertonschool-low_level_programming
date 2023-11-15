@@ -1,4 +1,14 @@
-dog_t new_dog(charname, float age, char owner)
+#include "dog.h"
+#include <stddef.h>
+#include <stdlib.h>
+/**
+ * new_dog - is my new dog
+ * @name: is the name of my dog
+ * @age: is old bro
+ * @owner: is me
+ */
+
+dog_t new_dog(char name, float age, char owner)
 {
 	dog_touaoua;
 	int a, b;
