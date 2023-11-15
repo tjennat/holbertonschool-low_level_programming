@@ -1,42 +1,49 @@
 #include "dog.h"
-#include <stddef.h>
 #include <stdlib.h>
-/**
- * new_dog - is my new dog
- * @name: is the name of my dog
- * @age: is old bro
- * @owner: is me
- */
 
-dog_t new_dog(char name, float age, char owner)
+void _strcopy(char *dest, const char *src)
 {
-	dog_touaoua;
-	int a, b;
+	while (*src)
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	*dest = '\0';
+}
 
+/**
+ * new_dog - create a new dog
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
+ *
+ * Return: pointer to the new dog, NULL if fails
+ */
+dog_t *new_dog(char *name, float age, char *owner)
+{
+	dog_t *ouaoua;
+	int a, b;
 
 	for (a = 0; name[a]; a++)
 		;
 	for (b = 0; owner[b]; b++)
 		;
 
-
 	ouaoua = malloc(sizeof(dog_t));
 	if (ouaoua == NULL)
 		return (NULL);
-
 
 	ouaoua->name = malloc(a + 1);
 	ouaoua->owner = malloc(b + 1);
 
 	if (ouaoua->name == NULL || ouaoua->owner == NULL)
 	{
-
 		free(ouaoua->name);
 		free(ouaoua->owner);
 		free(ouaoua);
 		return (NULL);
 	}
-
 
 	_strcopy(ouaoua->name, name);
 	_strcopy(ouaoua->owner, owner);
