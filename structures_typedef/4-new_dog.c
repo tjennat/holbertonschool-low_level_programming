@@ -1,41 +1,24 @@
-#include "dog.h"
+#include <string.h>
 #include <stdlib.h>
-
-void _strcopy(char *dest, const char *src)
-{
-	while (*src)
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	*dest = '\0';
-}
+#include "dog.h"
 
 /**
  * new_dog - create a new dog
  * @name: name of the dog
  * @age: age of the dog
  * @owner: owner of the dog
- *
  * Return: pointer to the new dog, NULL if fails
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *ouaoua;
-	int a, b;
-
-	for (a = 0; name[a]; a++)
-		;
-	for (b = 0; owner[b]; b++)
-		;
 
 	ouaoua = malloc(sizeof(dog_t));
 	if (ouaoua == NULL)
 		return (NULL);
 
-	ouaoua->name = malloc(a + 1);
-	ouaoua->owner = malloc(b + 1);
+	ouaoua->name = strdup(name);
+	ouaoua->owner = strdup(owner);
 
 	if (ouaoua->name == NULL || ouaoua->owner == NULL)
 	{
@@ -45,8 +28,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	_strcopy(ouaoua->name, name);
-	_strcopy(ouaoua->owner, owner);
 	ouaoua->age = age;
 
 	return (ouaoua);
