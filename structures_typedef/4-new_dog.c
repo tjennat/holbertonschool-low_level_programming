@@ -1,38 +1,36 @@
-#include <stdlib.h>
-#include <string.h>
-#include "dog.h"
-
-/**
- * new_dog - creating a new dog
- * @name: is the name of new dog
- * @age: is the age of the new dog
- * @owner: is me
- * Return: NULL or new dog
- */
-dog_t *new_dog(char *name, float age, char *owner)
+dog_t new_dog(charname, float age, char owner)
 {
-	dog_t *new_dog;
+	dog_touaoua;
+	int a, b;
 
-	if (name == NULL || owner == NULL)
+
+	for (a = 0; name[a]; a++)
+		;
+	for (b = 0; owner[b]; b++)
+		;
+
+
+	ouaoua = malloc(sizeof(dog_t));
+	if (ouaoua == NULL)
 		return (NULL);
 
-	new_dog = malloc(sizeof(dog_t));
-	if (new_dog == NULL)
-		return (NULL);
 
-	new_dog->name = strdup(name);
-	new_dog->owner = strdup(owner);
+	ouaoua->name = malloc(a + 1);
+	ouaoua->owner = malloc(b + 1);
 
-	if (new_dog->name == NULL || new_dog->owner == NULL)
+	if (ouaoua->name == NULL || ouaoua->owner == NULL)
 	{
-		free(new_dog->name);
-		free(new_dog->owner);
-		free(new_dog);
+
+		free(ouaoua->name);
+		free(ouaoua->owner);
+		free(ouaoua);
 		return (NULL);
 	}
 
-	new_dog->age = age;
 
-	return (new_dog);
+	_strcopy(ouaoua->name, name);
+	_strcopy(ouaoua->owner, owner);
+	ouaoua->age = age;
 
+	return (ouaoua);
 }
