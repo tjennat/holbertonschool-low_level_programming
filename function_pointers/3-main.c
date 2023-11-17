@@ -3,6 +3,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * main - is my main function
+ * @argc: is my array
+ * @argv: is value of my array
+ * Return: 0, 98, 99, 100
+ */
 int main(int argc, char **argv)
 {
 	int a = atoi(argv[1]);
