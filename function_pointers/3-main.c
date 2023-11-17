@@ -1,4 +1,4 @@
-#include "3-calc.h"
+include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -21,20 +21,20 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(98);
 	}
-	if ((strcmp(op, "/") == 0 || strcmp(op, "%") == 0) && b == 0)
+	if ((op[0] != '+') &&
+			(op[0] != '-') &&
+			(op[0] != '*') &&
+			(op[0] != '/') &&
+			(op[0] != '%'))
 	{
 		printf("Error\n");
 		return (99);
 	}
-	if ((op[0] != '+') &&
-		(op[0] != '-') &&
-		(op[0] != '*') &&
-		(op[0] != '/') &&
-		(op[0] != '%'))
-		{
+	if ((strcmp(op, "/") == 0 || strcmp(op, "%") == 0) && b == 0)
+	{
 		printf("Error\n");
 		return (100);
-		}
+	}
 	printf("%d\n", get_op_func(op)(a, b));
 	return (0);
 }
