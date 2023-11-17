@@ -21,15 +21,15 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(98);
 	}
-	if ((strcmp(op, "/") || strcmp(op, "%")) && b == 0)
+	if ((strcmp(op, "/") == 0 || strcmp(op, "%") == 0) && b == 0)
 	{
 		printf("Error\n");
 		return (99);
 	}
-	if ((op[0] != '+') &
-		(op[0] != '-') &
-		(op[0] != '*') &
-		(op[0] != '/') &
+	if ((op[0] != '+') &&
+		(op[0] != '-') &&
+		(op[0] != '*') &&
+		(op[0] != '/') &&
 		(op[0] != '%'))
 		{
 		printf("Error\n");
