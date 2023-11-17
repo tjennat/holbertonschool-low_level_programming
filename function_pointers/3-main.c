@@ -28,12 +28,12 @@ int main(int argc, char **argv)
 			(op[0] != '%'))
 	{
 		printf("Error\n");
-		return (99);
+		exit(99);
 	}
 	if ((strcmp(op, "/") == 0 || strcmp(op, "%") == 0) && b == 0)
 	{
 		printf("Error\n");
-		return (100);
+		exit(100);
 	}
 	printf("%d\n", get_op_func(op)(a, b));
 	return (0);
