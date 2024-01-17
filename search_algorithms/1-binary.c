@@ -1,4 +1,4 @@
-#include "search.h"
+#include "search_algos.h"
 
 /**
  * print_array - print an array
